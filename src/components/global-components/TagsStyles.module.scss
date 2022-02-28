@@ -1,0 +1,32 @@
+.text {
+  font-family: Kanit, "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  &::first-letter {
+    margin: 0 0 0 10px;
+  }
+  &::before {
+    content: "";
+    border-right: 30vw solid #fff1;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+  }
+}
+
+.button {
+  padding: 15px 50px;
+  margin: 5px 10px;
+  border-radius: 10000px;
+  background: linear-gradient(120deg, #c300ff, #00d9ff);
+  color: #ffff;
+  font-weight: bold;
+  border: none;
+
+  &:active {
+    // background: linear-gradient(120deg, hsl(296, 100%, 50%), hsl(199, 100%, 50%));
+    padding: 17px 52px;
+    transition: width 0.1s ease-in height 0.1s ease-in;
+  }
+}

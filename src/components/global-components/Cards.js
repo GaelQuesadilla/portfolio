@@ -1,24 +1,28 @@
-const Card = (props, ...rest) => {
+import "./CardsStyle.scss"
+
+export const Card = (props, ...rest) => {
   return (
-    <div className=".card" {...rest}>
+    <div className="card" {...rest}>
       {props.children}
     </div>
   );
 };
-const CardHeader = (props, ...rest) => {
+export const CardHeader = (props, ...rest) => {
   return (
-    <div className=".card__header" {...rest}>
+    <div className="card__header" {...rest}>
       {props.children}
     </div>
   );
 };
-const CardContent = (props, ...rest) => {
+export const CardContent = (props, ...rest) => {
   return (
-    <div className=".card__content" {...rest}>
+    <div className="card__content" {...rest}>
       {props.children}
     </div>
   );
 };
 
-const components = { Card, CardHeader, CardContent };
-export default components;
+export const CardImage = (props, ...rest) => {
+  return(<img className="card__image" src={props.src} alt={props.alt} {...rest}/>)
+}
+

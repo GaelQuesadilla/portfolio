@@ -1,0 +1,22 @@
+.nav {
+  background: linear-gradient(to left,#0e1a31f5, #0b1527f5) ;
+  padding: 5px 20px;
+  font-size: 1.3em;
+  position: fixed;
+  width: 100vw;
+  z-index: 9000;
+}
+
+.nav-list{
+  padding: 0;
+  margin: 0 20px 0 0;
+  list-style: none;
+  &__element{
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  // &--el{}
+  // &--li{}
+
+}
