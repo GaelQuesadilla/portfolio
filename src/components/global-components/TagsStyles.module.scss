@@ -6,13 +6,6 @@
   &::first-letter {
     margin: 0 0 0 10px;
   }
-  &::before {
-    content: "";
-    border-right: 30vw solid #fff1;
-    position: absolute;
-    width: 1px;
-    height: 100%;
-  }
 }
 
 .button {
@@ -28,5 +21,31 @@
     // background: linear-gradient(120deg, hsl(296, 100%, 50%), hsl(199, 100%, 50%));
     padding: 17px 52px;
     transition: width 0.1s ease-in height 0.1s ease-in;
+  }
+}
+
+.tags {
+  margin: 10px 5px;
+  &__element{
+    margin: 15px 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    text-shadow: 2px 2px #0023;
+    border-radius: 100px;
+
+  }
+}
+
+
+.list{
+  &__element{
+    list-style: none;
+    list-style: square;
+    a{
+      &:link, &:visited{
+        color: #fff;
+        text-decoration: none;
+      }     
+    }
   }
 }

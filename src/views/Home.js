@@ -3,7 +3,13 @@ import {
   SectionDivider,
   SectionHeader,
 } from "./../components/global-components/Sections";
-import { Button, P } from "./../components/global-components/Tags";
+import {
+  Button,
+  Element,
+  List,
+  P,
+  Tags,
+} from "./../components/global-components/Tags";
 import {
   Card,
   CardContent,
@@ -11,27 +17,8 @@ import {
   CardImage,
 } from "./../components/global-components/Cards";
 
-import mymditorView from "../images/mymditorPreview.png";
-import manitaMichiView from "../images/manita-michiPreview.png";
+import { contacts, projects_data } from "../resources/data";
 
-const projects_data = [
-  {
-    projectName: "Mymditor",
-    url: "https://github.com",
-    description:
-      "Mymditor es un procesador de texto basado en django y react con servicios en la nube",
-    imageSrc: mymditorView,
-    tags: ["jaavscript", "django", "sass"],
-  },
-  {
-    projectName: "Manita de Michi",
-    url: "https://github.com",
-    description:
-      "Manita de Michi es una pagina de catalogos diseñada para un proyecto de ventas",
-    imageSrc: manitaMichiView,
-    tags: ["jaavscript", "django", "sass", "En desarrollo"],
-  },
-];
 const Home = (props, ...rest) => {
   return (
     <div className="content">
@@ -40,13 +27,13 @@ const Home = (props, ...rest) => {
           ¡Hola! <br />
           Mi nombre es Gael
         </SectionHeader>
-        <P>
-          Soy un desarrollador, centrado en la creación de paginas web,
-          interesado en utilizar sus conocimientos para hacer ideas realidad
-        </P>
+        <P>Soy un desarrollador, centrado en la creación de paginas web</P>
         <br />
         <a href="#projects">
-          <Button>Ver más</Button>
+          <Button>Ver projectos</Button>
+        </a>
+        <a href="#contact">
+          <Button>Contactame</Button>
         </a>
       </Section>
       <Section>
@@ -61,8 +48,26 @@ const Home = (props, ...rest) => {
             <CardHeader>{el.projectName}</CardHeader>
             <CardImage src={el.imageSrc} alt={el.projectName} />
             <CardContent>{el.description}</CardContent>
+            <Tags tags={el.tags} />
           </Card>
         ))}
+      </Section>
+      <Section>
+        <SectionDivider title="contact" />
+        <SectionHeader>Contactame</SectionHeader>
+        <P>Puedes contactarme en los siguientes medios</P>
+        <Card>
+          <List>
+            {contacts.map((el) => (
+              <Element>
+                <a href={el.url} targer="__BLANK">
+                  <span style={{ fontSize: "1.5em", padding:"10px"}}>{el.icon}</span>
+                  {el.name}
+                </a>
+              </Element>
+            ))}
+          </List>
+        </Card>
       </Section>
     </div>
   );
