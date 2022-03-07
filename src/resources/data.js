@@ -58,17 +58,17 @@ export const projects_data = [
 export const contacts = [
   {
     name: "Github",
-    url: "",
-    icon: <FaGithub/>,
+    url: "https://github.com/GaelQuesadilla",
+    icon: <FaGithub />,
   },
   {
     name: "Instagram",
-    url: "",
-    icon: <FaInstagram/>,
+    url: "https://www.instagram.com/faeloo0",
+    icon: <FaInstagram />,
   },
   {
     name: "Correo Electronico",
-    url: "",
-    icon: <FaMailBulk/>,
+    url: "mailto:gaelglz032@gmail.com",
+    icon: <FaMailBulk />,
   },
 ];
