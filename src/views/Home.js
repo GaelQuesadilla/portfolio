@@ -25,9 +25,13 @@ const Home = (props, ...rest) => {
       <Section>
         <SectionHeader title="home">
           ¡Hola! <br />
-          Mi nombre es Gael
+          Soy Gael
         </SectionHeader>
-        <P>Soy un desarrollador, centrado en la creación de paginas web</P>
+        <P>
+          Soy un desarrollador web, intereresado en hacer tus proyectos realidad
+          <br />
+          Hay que crear <b>soluciones</b> hoy para estar mejor <b>mañana</b>
+        </P>
         <br />
         <a href="#projects">
           <Button>Ver projectos</Button>
@@ -41,7 +45,7 @@ const Home = (props, ...rest) => {
         <SectionHeader>Proyectos</SectionHeader>
         <P>
           He realizado una variedad de proyectos a lo largo de mi formación
-          autodidacta
+          autodidacta, con el objetivo de mejorar mas cada día
         </P>
         {projects_data.map((el) => (
           <Card>
@@ -55,13 +59,21 @@ const Home = (props, ...rest) => {
       <Section>
         <SectionDivider title="contact" />
         <SectionHeader>Contactame</SectionHeader>
-        <P>Puedes contactarme en los siguientes medios</P>
+        <P>
+          ¿Alguna duda?
+          <br />
+          ¿Quieres trabajar conmigo?
+          <br />
+          Puedes contactarme por los siguientes medios
+        </P>
         <Card>
           <List>
             {contacts.map((el) => (
               <Element>
                 <a href={el.url} targer="__BLANK">
-                  <span style={{ fontSize: "1.5em", padding:"10px"}}>{el.icon}</span>
+                  <span style={{ fontSize: "1.5em", padding: "10px" }}>
+                    {el.icon}
+                  </span>
                   {el.name}
                 </a>
               </Element>
